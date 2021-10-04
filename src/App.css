@@ -1,0 +1,61 @@
+.app {
+  background-color: #182028;
+  margin: 0 auto;
+  padding: 30px 200px;
+}
+
+.app .image {
+  max-width: 500px;
+  position: relative;
+}
+
+.firstBorder {
+  margin: 10px 0px;
+  padding: 0px;
+  max-width: 540px;
+  border: 10px solid #4062bb;
+  box-shadow: 5px -5px 10px #0000004d;
+}
+
+.secondBorder {
+  background-color: #4062bb;
+  margin: 0px;
+  padding: 0px;
+  max-width: 520px;
+  border: 10px solid #ff5291;
+  box-shadow: 5px -5px 10px #0000004d;
+}
+
+.app .image:hover {
+  filter: none;
+  transform: translateX(10%) translateY(-5%) rotatez(5deg);
+  transition: 0.5s ease-in-out;
+  box-shadow: 5px -5px 10px #0000004d;
+}
+
+.profilePicture {
+  border-radius: 50%;
+  padding: 5px;
+  width: 200px;
+  box-shadow: 5px -5px 10px #0000004d;
+}
+
+.firstProfileBorder {
+  border-radius: 50%;
+  margin: 60px 0px 0px 60px;
+  max-width: 240px;
+  max-height: 240px;
+  padding: 0px;
+  border: 10px solid #068d7e;
+  box-shadow: 5px -5px 10px #0000004d;
+}
+
+.secondProfileBorder {
+  background-color: #f8ffe5;
+  border-radius: 50%;
+  margin: 0px;
+  max-width: 220px;
+  padding: 0px;
+  border: 10px solid #eebc1f;
+  box-shadow: 5px -5px 10px #0000004d;
+}

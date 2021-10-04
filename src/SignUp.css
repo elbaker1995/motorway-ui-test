@@ -1,0 +1,57 @@
+.signUpForm {
+  border: 5px solid #eebc1f;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 900px;
+  background-color: #f8ffe5;
+  box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.secondSignUpBorder {
+  border: 5px solid #068d7e;
+  max-width: 900px;
+  box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.titles,
+.inputs {
+  padding: 0px;
+}
+
+.titles p {
+  text-align: right;
+  padding: 0px;
+  margin: 10px;
+}
+
+.inputs input {
+  margin: 3px;
+}
+
+.salary,
+.colourPicker {
+  margin-top: 10px;
+}
+
+.salaryText {
+  padding: 20px 0px, 0px;
+  margin: 0px;
+  text-align: left;
+}
+
+.salaryText input {
+  border: none;
+  color: black;
+  max-width: 100px;
+  background-color: transparent;
+}
+
+.salaryRange {
+  padding: 0px;
+  margin: 0px;
+}
+
+input:invalid {
+  border: 2px solid rgb(172, 172, 172);
+  color: #ff5291;
+}

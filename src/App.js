@@ -1,33 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
+const SignUpForm = React.lazy(() => import(`./SignUp`));
+const Images = React.lazy(() => import(`./Images`));
 
 const App = () => {
-  const [images, setImages] = useState();
-
-  useEffect(() => {
-    fetch('images?limit=10')
-      .then(res => res.json())
-      .then(data => {
-        console.log('Success:', data);
-        setImages(data);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }, []);
-
   return (
-    <div className='app'>
-      {
-        images && images.map(img => (
-          <div key={img.id} >
-            <img src={`${img.url}.jpg`} alt=''/>
-            <img src={`${img.user.profile_image}.webp`} alt=''/>
-          </div>
-        ))
-      }
+    <div className="app">
+      <div className="container">
+        <React.Suspense fallback={<p>loading...</p>}>
+          <SignUpForm />
+        </React.Suspense>
+        <React.Suspense fallback={<p>images loading...</p>}>
+          <Images />
+        </React.Suspense>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
