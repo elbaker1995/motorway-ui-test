@@ -3,9 +3,20 @@ import "./SignUp.css";
 
 export default function SignUpForm() {
   let [salary, setSalary] = useState("20000");
+  let [name, setName] = useState(null);
 
   function handleChange(event) {
     setSalary(event.target.value);
+  }
+
+  function handleClick(event) {
+    event.preventDefault();
+    console.log(name);
+    alert(`Hello ${name}`);
+  }
+
+  function handleName(event) {
+    setName(event.target.value);
   }
 
   return (
@@ -18,7 +29,12 @@ export default function SignUpForm() {
             <p>Date of Birth </p>
           </div>
           <div className=" inputs col">
-            <input type="text" placeholder="Name" required="required"></input>
+            <input
+              type="text"
+              placeholder="Name"
+              required="required"
+              onChange={handleName}
+            ></input>
             <span className="required"></span>
             <input type="email" placeholder="Email" required="required"></input>
             <span className="required"></span>
@@ -73,7 +89,7 @@ export default function SignUpForm() {
             </div>
           </div>
         </div>
-        <input type="submit" />
+        <input type="submit" onClick={handleClick} />
       </form>
     </div>
   );

@@ -22,7 +22,11 @@ const Images = () => {
           <div key={img.id} className="row">
             <div className="firstBorder col">
               <div className="secondBorder">
-                <img className="image" src={`${img.url}.jpg`} alt="" />
+                <picture>
+                  <source srcSet={`${img.url}.webp`} type="image/webp"></source>
+                  <source srcSet={`${img.url}.jpg`} type="image/jpeg"></source>
+                  <img className="image" src={`${img.url}.jpg`} alt="" />
+                </picture>
               </div>
             </div>
             <div className="firstProfileBorder col">
